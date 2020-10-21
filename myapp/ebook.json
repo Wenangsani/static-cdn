@@ -1,0 +1,158 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "img": "static/ebook/10-shalat.png",
+            "title": "10 Rakaat Shalat Rawatib Dalam Sehari",
+            "writer": "Muhammad Abduh Tuasikal",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/10-shalat.pdf"
+        },
+        {
+            "id": "2",
+            "img": "static/ebook/30-langkah.png",
+            "title": "30 Langkah Dalam Mendidik Anak",
+            "writer": "Salim Sholih Ahmad Ibn Madhi",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/30-langkah.pdf"
+        },
+        {
+            "id": "3",
+            "img": "static/ebook/40-cara.png",
+            "title": "40 Cara Menyelesaikan Masalah",
+            "writer": "Syaikh Abdul Malik al-Qasim",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-40-cara.pdf"
+        },
+        {
+            "id": "4",
+            "img": "static/ebook/agar-doa.png",
+            "title": "Agar Do'a Anda Mustajab",
+            "writer": "Azhari Ahmad Mahmud",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "5",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Apakah-Taubat-Harus-Diumumkan-Cover-JPEG.png",
+            "title": "Apakah Tobat Harus di Umumkan?",
+            "writer": "Yulian Purnama",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "6",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Bahaya-Gibah-Cover-JPEG.png",
+            "title": "Bahaya Ghibah - Menggunjing kehormatan sesama muslim",
+            "writer": "Abu ‘Abdil Muhsin Firanda",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "7",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Inilah-7-Dampak-Harta-Haram-cover.png",
+            "title": "7 Dampak Harta Haram",
+            "writer": "Muhammad Abduh Tuasikal",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "8",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Barang-yang-Haram-Diperjualbelikan-Cover-JPEG.png",
+            "title": "Barang yang Haram Diperjualbelikan",
+            "writer": "Muhammad Abduh Tuasikal",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "9",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Cara-Menghilangkan-Najis-Cover-JPEG.png",
+            "title": "Safinatun Najah: Cara Menghilangkan Najis",
+            "writer": "Muhammad Abduh Tuasikal",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "10",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Tempat-Yang-Sah-Untuk-Shalat-Cover-JPEG.png",
+            "title": "Manhajus Salikin: Tempat yang Sah untuk Shalat",
+            "writer": "Muhammad Abduh Tuasikal",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "11",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Tiga-Wasiat-Untuk-Para-Penuntut-Ilmu-Cover-JPEG.png",
+            "title": "3 Wasiat untuk Para Penuntut Ilmu",
+            "writer": "M. Saifudin Hakim",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "12",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Jangan-Terlena-Dengan-Pujian-Cover-JPEG.png",
+            "title": "Jangan Terlena dengan Pujian",
+            "writer": "Azka Haris",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "13",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Merasa-Miskin-Dan-Kurang-Harta-Cover-JPEG.png",
+            "title": "10 Sebab Senantiasa Merasa Miskin Dan Kurang Harta",
+            "writer": "Yulian Purnama",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "14",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Menjaga-Lisan-Di-Era-Media-Sosial-Cover-JPEG.png",
+            "title": "Menjaga Lisan di Era Media Sosial",
+            "writer": "M. Saifudin Hakim",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "15",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Kisah-Wanita-Paling-Teladan-Cover-JPEG.png",
+            "title": "Kisah Wanita-wanita Teladan",
+            "writer": "Abdullah Haidir",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "16",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Kunci-Sukses-Rumah-Tangga-Bahagia-Cover-JPEG.png",
+            "title": "Kunci-kunci Sukses Rumah Tangga Bahagia",
+            "writer": "Abu Ubaidah Yusuf bin Mukhtar As-Sidawi",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "17",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Menuju-Hati-Yang-Bersih-Bahan-Cover-JPEG.png",
+            "title": "Menuju Hati yang Bersih",
+            "writer": "Khalid bin Abdullah Al-Mushlih",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "18",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Pedndidikan-Anak-Dalam-Islam-Cover-JPEG.png",
+            "title": "Pendidikan Anak dalam Islam",
+            "writer": "Syaikh Yusuf Muhammad al-Hasan",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "19",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Pentingnya-Silaturahim-Cover-JPEG.png",
+            "title": "Pentingnya Silaturrahim",
+            "writer": "Isnan Efendi Abu Abdus Syahid al-fujuti",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "20",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Siap-Naik-Pelaminan-Cover-JPEG.png",
+            "title": "Siap Naik Pelaminan",
+            "writer": "Muhammad Abduh Tuasikal",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "21",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Tanda-Cinta-Kepada-Rasulullah-Cover-JPEG.png",
+            "title": "Cinta Nabi dan Tanda-tandanya",
+            "writer": "Prof. DR. Fadhl Ilahi",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "22",
+            "img": "https://wenangsani.github.io/static-cdn/ebook/cover/Bersama-Tetangga-Cover-JPEG.png",
+            "title": "Bersama Tetangga",
+            "writer": "Ummu Sufyan",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        }
+    ]
+}
