@@ -4,13 +4,25 @@
             "id": "1",
             "name": "Gantungan Kunci Al-Qur'an",
             "price_before": "Rp. 20.000,-",
-            "price": "Rp. 15.000,-"
+            "price": "Rp. 15.000,-",
+            "pic1": "https://wenangsani.github.io/fileu/ads/ganci1.jpg",
+            "pic2": "https://wenangsani.github.io/fileu/ads/ganci2.jpg",
+            "pic3": "https://wenangsani.github.io/fileu/ads/ganci3.jpg",
+            "pic4": "https://wenangsani.github.io/fileu/ads/ganci4.jpg",
+            "html": "FALSE",
+            "url": "a"
         },
         {
             "id": "2",
             "name": "Al-Qur'an Digital Exclusive",
             "price_before": "Rp. 1.500.000,-",
-            "price": "Rp. 1.195.000,-"
+            "price": "Rp. 1.195.000,-",
+            "pic1": "https://wenangsani.github.io/fileu/ads/quran-digital1.png",
+            "pic2": "https://wenangsani.github.io/fileu/ads/quran-digital2.png",
+            "pic3": "https://wenangsani.github.io/fileu/ads/quran-digital3.png",
+            "pic4": "https://wenangsani.github.io/fileu/ads/quran-digital4.png",
+            "html": "FALSE",
+            "url": "a"
         }
     ]
 }
