@@ -1,4 +1,4 @@
 {
-   notif: false,
-   newproduct: true
+   "notif": false,
+   "newproduct": true
 }
