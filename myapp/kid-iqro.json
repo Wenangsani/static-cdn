@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "title": "IQRO 1",
+            "cover": "static/child/iqro.png",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "2",
+            "title": "IQRO 2",
+            "cover": "static/child/iqro.png",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "3",
+            "title": "IQRO 3",
+            "cover": "static/child/iqro.png",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "4",
+            "title": "IQRO 4",
+            "cover": "static/child/iqro.png",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "5",
+            "title": "IQRO 5",
+            "cover": "static/child/iqro.png",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        },
+        {
+            "id": "6",
+            "title": "IQRO 6",
+            "cover": "static/child/iqro.png",
+            "url": "https://wenangsani.github.io/static-cdn/ebook/pdf/ebook-agar-doa.pdf"
+        }
+    ]
+}
