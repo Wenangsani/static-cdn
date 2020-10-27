@@ -1,5 +1,5 @@
 {
    "notif": false,
    "newproduct": true,
-   "ads": "Disini iklan"
+   "ads": "<div style='padding:10px'>Disini info terbaru.</div>"
 }
