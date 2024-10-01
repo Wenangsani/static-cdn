@@ -70,9 +70,6 @@
         <div class="flex flex-col items-center mt-6">
             <label class="mt-4 text-lg">Suhu Laut: <span id="temperature">30°C</span></label>
             <input id="temperature-slider" type="range" min="30" max="60" value="30" class="mt-2 w-64">
-
-            <!-- Total Active Proteins -->
-            <p class="mt-4 text-lg">Total Protein Aktif: <span id="active-proteins">10</span></p>
         </div>
     </div>
 
@@ -82,7 +79,6 @@
         const temperatureDisplay = document.getElementById("temperature");
         const sun = document.getElementById("sun");
         const proteins = document.querySelectorAll('.protein');
-        const activeProteinsDisplay = document.getElementById("active-proteins");
 
         // List of proteins to hide at different temperature levels
         const proteinBreakpoints = {
@@ -110,7 +106,6 @@
                 proteins.forEach(protein => {
                     protein.classList.remove("protein-hidden");
                 });
-                updateActiveProteinsCount(proteins.length);
             }
         });
 
@@ -128,7 +123,6 @@
             }
 
             // Hide proteins according to the current hideCount
-            let activeProteins = proteins.length - hideCount;
             proteins.forEach((protein, index) => {
                 if (index < hideCount) {
                     protein.classList.add("protein-hidden");
@@ -136,12 +130,6 @@
                     protein.classList.remove("protein-hidden");
                 }
             });
-            updateActiveProteinsCount(activeProteins);
-        }
-
-        // Function to update the total active proteins count
-        function updateActiveProteinsCount(activeCount) {
-            activeProteinsDisplay.textContent = activeCount;
         }
 
         // Function to update the sun brightness based on temperature
