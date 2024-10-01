@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Denaturasi Protein Cacing Nyale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .protein {
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            transition: transform 4s ease-in-out, opacity 1s ease-in-out; /* Slower transition for movement and opacity */
+        }
+
+        .protein-hidden {
+            opacity: 0;
+            pointer-events: none; /* Prevent interactions */
+        }
+
+        .sun {
+            transition: opacity 1s ease-in-out, filter 1s ease-in-out; /* Smooth transition for brightness */
+        }
+
+        .nyale {
+            position: absolute;
+            width: 256px;
+            height: 48px;
+            background-color: #38a169;
+            border-radius: 24px;
+            transition: transform 2s ease-in-out; /* Smooth transition for nyale movement */
+        }
+    </style>
+</head>
+<body class="bg-blue-100">
+
+    <!-- Container -->
+    <div class="container mx-auto p-6 max-w-4xl">
+        <!-- Title -->
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Simulasi Denaturasi Protein Cacing Nyale</h1>
+
+        <!-- Sun -->
+        <div class="flex justify-center">
+            <div class="relative w-24 h-24 bg-yellow-500 rounded-full shadow-lg">
+                <div id="sun" class="absolute inset-0 rounded-full bg-yellow-400 sun"></div>
+            </div>
+        </div>
+
+        <!-- Sea and Nyale -->
+        <div class="relative mt-6 w-full h-64 bg-blue-500 rounded-lg overflow-hidden">
+            <!-- Nyale -->
+            <div id="nyale" class="nyale">
+                <!-- Proteins inside Nyale (now 10 proteins) -->
+                <div id="protein1" class="protein"></div>
+                <div id="protein2" class="protein"></div>
+                <div id="protein3" class="protein"></div>
+                <div id="protein4" class="protein"></div>
+                <div id="protein5" class="protein"></div>
+                <div id="protein6" class="protein"></div>
+                <div id="protein7" class="protein"></div>
+                <div id="protein8" class="protein"></div>
+                <div id="protein9" class="protein"></div>
+                <div id="protein10" class="protein"></div>
+            </div>
+        </div>
+
+        <!-- Temperature Control -->
+        <div class="flex flex-col items-center mt-6">
+            <label class="mt-4 text-lg">Suhu Laut: <span id="temperature">30°C</span></label>
+            <input id="temperature-slider" type="range" min="30" max="60" value="30" class="mt-2 w-64">
+
+            <!-- Total Active Proteins -->
+            <p class="mt-4 text-lg">Total Protein Aktif: <span id="active-proteins">10</span></p>
+        </div>
+    </div>
+
+    <script>
+        const nyale = document.getElementById("nyale");
+        const temperatureSlider = document.getElementById("temperature-slider");
+        const temperatureDisplay = document.getElementById("temperature");
+        const sun = document.getElementById("sun");
+        const proteins = document.querySelectorAll('.protein');
+        const activeProteinsDisplay = document.getElementById("active-proteins");
+
+        // List of proteins to hide at different temperature levels
+        const proteinBreakpoints = {
+            45: 1,
+            50: 3,
+            55: 6,
+            60: 10
+        };
+
+        let t = 0; // Time variable for sinusoidal movement
+
+        // Update temperature and trigger denaturation effect
+        temperatureSlider.addEventListener("input", function () {
+            const temp = temperatureSlider.value;
+            temperatureDisplay.textContent = `${temp}°C`;
+
+            // Update sun brightness based on the temperature
+            updateSunBrightness(temp);
+
+            // Apply denaturation (hiding proteins based on temperature)
+            if (temp >= 45) {
+                hideProteins(temp);
+            } else {
+                // Show all proteins if temperature is below 45
+                proteins.forEach(protein => {
+                    protein.classList.remove("protein-hidden");
+                });
+                updateActiveProteinsCount(proteins.length);
+            }
+        });
+
+        // Function to hide a certain number of proteins based on the temperature
+        function hideProteins(temp) {
+            let hideCount = 0;
+            if (temp >= 60) {
+                hideCount = proteinBreakpoints[60];
+            } else if (temp >= 55) {
+                hideCount = proteinBreakpoints[55];
+            } else if (temp >= 50) {
+                hideCount = proteinBreakpoints[50];
+            } else if (temp >= 45) {
+                hideCount = proteinBreakpoints[45];
+            }
+
+            // Hide proteins according to the current hideCount
+            let activeProteins = proteins.length - hideCount;
+            proteins.forEach((protein, index) => {
+                if (index < hideCount) {
+                    protein.classList.add("protein-hidden");
+                } else {
+                    protein.classList.remove("protein-hidden");
+                }
+            });
+            updateActiveProteinsCount(activeProteins);
+        }
+
+        // Function to update the total active proteins count
+        function updateActiveProteinsCount(activeCount) {
+            activeProteinsDisplay.textContent = activeCount;
+        }
+
+        // Function to update the sun brightness based on temperature
+        function updateSunBrightness(temp) {
+            // Map temperature from 30 to 60 to a brightness scale (1 to 2)
+            const brightness = 1 + (temp - 30) / 30;
+            sun.style.filter = `brightness(${brightness})`;
+        }
+
+        // Generate smooth random movement for proteins
+        function moveProtein(protein) {
+            const nyaleRect = nyale.getBoundingClientRect();
+            const maxX = nyaleRect.width - 8; // width of protein
+            const maxY = nyaleRect.height - 8; // height of protein
+
+            setInterval(() => {
+                const randomX = Math.random() * maxX;
+                const randomY = Math.random() * maxY;
+
+                protein.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            }, 4000); // Move every 4 seconds for a slower transition
+        }
+
+        // Function to move Nyale like a worm (cacing) using sinusoidal motion
+        function moveNyaleLikeWorm() {
+            const seaRect = document.querySelector('.relative.mt-6').getBoundingClientRect();
+            const maxX = seaRect.width - nyale.offsetWidth; // Ensure Nyale stays within bounds
+            const amplitude = 50; // Amplitude for the wave motion
+            const frequency = 0.02; // Frequency for the wave motion
+
+            setInterval(() => {
+                t += 0.05; // Increment time for wave motion
+                const x = t * 50; // Horizontal movement (forward)
+                const y = amplitude * Math.sin(frequency * x); // Vertical wave-like movement
+
+                // Ensure Nyale stays within the container
+                if (x < maxX) {
+                    nyale.style.transform = `translate(${x}px, ${y + 100}px)`; // Adjust y to stay within container
+                } else {
+                    t = 0; // Reset time when reaching boundary
+                }
+            }, 100); // Move nyale like a worm with small time intervals
+        }
+
+        // Initialize smooth movement for Nyale like a worm and proteins
+        proteins.forEach(protein => moveProtein(protein));
+        moveNyaleLikeWorm(); // Initialize Nyale movement like a worm
+
+    </script>
+
+</body>
+</html>
