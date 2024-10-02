@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Pewarna Alami & Pewarna Buatan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    canvas {
+      border: 1px solid #ccc;
+      cursor: crosshair;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="text-center mt-2 mb-2"> <!-- Margin judul dikecilkan -->
+    <h1 class="text-3xl font-bold text-black">Simulasi Pewarna Alami & Pewarna Buatan</h1>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container mx-auto mt-6 p-10"> <!-- Padding diperbesar untuk layar laptop -->
+
+    <!-- Pewarna Alami & Buatan -->
+    <section class="bg-white shadow-md p-10 rounded-lg mb-10"> <!-- Padding simulasi diperbesar -->
+
+      <div class="grid grid-cols-2 gap-6">
+        <!-- Pewarna Alami -->
+        <div>
+          <h3 class="text-xl font-semibold">Pewarna Alami</h3>
+          <div class="space-y-2">
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#FBC02D', 'Kunyit (Kuning)')">Kunyit</button>
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#388E3C', 'Bayam (Hijau)')">Bayam</button>
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#D32F2F', 'Bit (Merah)')">Bit</button>
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#1E88E5', 'Bunga Telang (Biru)')">Bunga Telang</button>
+          </div>
+        </div>
+
+        <!-- Pewarna Buatan -->
+        <div>
+          <h3 class="text-xl font-semibold">Pewarna Buatan</h3>
+          <div class="space-y-2">
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#8E24AA', 'Tartrazine (Kuning)')">Tartrazine</button>
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#F06292', 'Allura Red (Merah)')">Allura Red</button>
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#F57C00', 'Sunset Yellow (Oranye)')">Sunset Yellow</button>
+            <button class="bg-blue-500 text-white p-2 rounded w-full" onclick="setColor('#9E9E9E', 'Carbon Black (Hitam)')">Carbon Black</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canvas untuk menampilkan warna -->
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold">Warna yang Dipilih (Gores untuk menggambar):</h3>
+        <canvas id="drawingCanvas" width="600" height="300" class="w-full rounded-lg"></canvas>
+        <p id="colorInfo" class="text-center mt-2"></p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Script -->
+  <script>
+    let canvas = document.getElementById('drawingCanvas');
+    let ctx = canvas.getContext('2d');
+    let drawing = false;
+    let currentColor = '#000'; // Default color
+    let colorName = '';
+
+    // Fungsi untuk mengubah warna dan membersihkan canvas
+    function setColor(color, name) {
+      currentColor = color;
+      colorName = name;
+      document.getElementById('colorInfo').innerText = 'Warna dari ' + name;
+      clearCanvas(); // Menghapus gambar yang ada di canvas saat warna baru dipilih
+    }
+
+    // Membersihkan canvas
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Menghapus semua konten di canvas
+    }
+
+    // Mulai menggambar
+    canvas.addEventListener('mousedown', function (e) {
+      drawing = true;
+      ctx.beginPath();
+      ctx.moveTo(e.offsetX, e.offsetY);
+    });
+
+    // Menggambar
+    canvas.addEventListener('mousemove', function (e) {
+      if (drawing) {
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.strokeStyle = currentColor;
+        ctx.lineWidth = 5;
+        ctx.stroke();
+      }
+    });
+
+    // Berhenti menggambar
+    canvas.addEventListener('mouseup', function () {
+      drawing = false;
+    });
+
+    // Berhenti menggambar saat kursor keluar dari canvas
+    canvas.addEventListener('mouseleave', function () {
+      drawing = false;
+    });
+  </script>
+
+</body>
+</html>
